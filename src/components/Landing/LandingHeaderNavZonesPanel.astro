@@ -90,32 +90,3 @@ import { Separator } from "@/components/ui/separator";
 </script>
 
 
-
-	
-  
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-
-	const indicators = document.querySelectorAll(".indicator");
-	indicators.forEach(function (e) {
-		e.addEventListener("mouseenter", () => showDescription(e));
-	});
-
-
-	function showDescription(e) {
-
-		const descriptions = document.querySelectorAll(".description");
-		descriptions.forEach(function (e) {
-			(e as HTMLElement).style.display = "none";
-		});
-
-		const description = document.getElementById(`${e.id}Description`)
-		description.style.display = "flex";
-	}
-
-
-
-  });
-
-</script>
