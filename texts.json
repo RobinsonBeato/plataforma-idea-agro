@@ -64,7 +64,7 @@
 				"Zones": {
 					"generalDescription": "Descripcion general de las zonas de interés que ofrece nuestra plataforma",
 					"defineZones": {
-						"title": "Zonas seleccionadas en el mapa",
+						"title": "Mis Zonas",
 						"description": "Dibuje en el mapa las zona de su interés o importe un fichero shape, kml o kmz."
 					},
 					"policeSectionsZones": {
