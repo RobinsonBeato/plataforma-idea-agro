@@ -4,8 +4,19 @@ import texts from "@/../texts.json";
 import CardIndicators from "./CardIndicators.astro";
 ---
 <section class="flex-col min-h-screen w-screen text-center relative overflow-hidden pb-28 ">
-   <div class="absolute inset-0 bg-gradient-to-r from-[#1f3322] to-[#039728] opacity-80 -z-10"></div>
-   <h1 class="p-4 mb-[60px] text-xl md:text-3xl xl:text-4xl font-medium text-center fadeInUp fadeInUpSlow bg-gradient-to-l from-[#c1c011] to-white  text-primary">Características estructurales y funcionales</h1>
+   <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#0d0d0d_0%,_#08681b_100%)]  opacity-80 -z-10"></div>
+   <section class="relative py-4 bg-[radial-gradient(ellipse_at_center,_#08681b_0%,_#0d0d0d_100%)]">
+      <div class="max-w-5xl mx-auto px-6">
+        
+        <!-- Título principal grande y en negrita -->
+        <h2 class="mt-2 text-2xl sm:text-3xl md:text-4xl  text-white">
+          Características Estructurales y Funcionales
+        </h2>
+    
+        
+    </section>
+    
+    
   <section class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:gap-[50px] xl:gap-[20px] gap-4 mt-[6rem] mx-5 sm:mx-10 lg:mx-20 z-30 relative md:pt-28 xl:pt-4 md:px-24">
       
       <CardIndicators title={texts.landing.header.nav.Indicators.ioseIndicator.title} description={texts.landing.header.nav.Indicators.ioseIndicator.description} image="/images/1.jpeg" buttonLink="/Main?indicator=IOSE" buttonText="Acceder" />

@@ -6,47 +6,53 @@ import { Icon } from "astro-icon/components";
 import texts from "@/../texts.json";
 import { TermConditions } from "../TermsConditions";
 import SocialMedia from "../SocialMedia.astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class="lex-col min-h-screen w-screen text-center relative overflow-hidden ">
-	<div class="absolute inset-0 bg-gradient-to-r from-[#172c1a] to-[#067722] opacity-80 -z-10"></div>
-	<div class="flex flex-col md:flex-row justify-between items-center flex-grow rounded-lg pt-10 mt-28">
-	  <div class="flex flex-col justify-around items-center flex-grow ">
-		<!-- Título -->
-		<p class="text-3xl md:text-3xl xl:text-5xl font-medium text-center fadeInUp fadeInUpSlow">
-		  {texts.footer.titleWhoWhere}
-		</p>
-		<!-- Descripción -->
-		<p class="text-sm md:text-md xl:text-md py-5 px-5 md:px-10 xl:px-20 text-center whitespace-pre-line fadeInUp fadeInUpSlower-xl text-white">
-		  {texts.footer.descriptionWhoWhere}
-		</p>
-	  </div>
+<footer class="relative w-screen min-h-screen text-center overflow-hidden">
+  <!-- Fondo del footer -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#0d0d0d_0%,_#08681b_100%)]  opacity-80 -z-10"></div>
   
-	  <!-- Slider en pantallas más grandes -->
-	  <div class=" md:w-auto sm-w-[3px] mt-6 md:mt-0 flex justify-around items-start fadeInUp fadeInUpSlower-x">
-		<FooterSlider client:load />
-	  </div>
-	</div>
+  <!-- Contenido superior: Título, descripción y slider -->
+  <div class="flex flex-col md:flex-row justify-between items-center flex-grow rounded-lg pt-10 mt-28">
+    <div class="flex flex-col justify-around items-center flex-grow">
+      <!-- Título -->
+      <p class="text-3xl md:text-3xl xl:text-5xl font-medium text-center fadeInUp fadeInUpSlow">
+        {texts.footer.titleWhoWhere}
+      </p>
+      <!-- Descripción -->
+      <p class="text-sm md:text-md xl:text-md py-5 px-5 md:px-10 xl:px-20 text-center whitespace-pre-line fadeInUp fadeInUpSlower-xl text-white">
+        {texts.footer.descriptionWhoWhere}
+      </p>
+    </div>
+    <!-- Slider en pantallas más grandes -->
+    <div class="md:w-auto mt-6 md:mt-0 flex justify-around items-start fadeInUp fadeInUpSlower-x">
+      <FooterSlider client:load />
+    </div>
+  </div>
   
-	<!-- Separador -->
-	<Separator className="mx-auto w-[90%] md:w-[80%] lg:w-[70%]  mb-3 mt-24" />
-  
-	<!-- Sección inferior del footer -->
-	<div class="flex flex-col lg:flex-row justify-center py-3 text-white text-sm space-y-4 lg:space-y-0 lg:space-x-6">
-	  <ul class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-		<!-- Enlaces -->
-		<li class="mx-2 md:mx-4 transition-transform transform-gpu hover:scale-110">
-		  <a rel="noopener noreferrer" href="#">Pastizales ROU © 2024</a>
-		</li>
-		<li class="mx-2 md:mx-4 transition-transform transform-gpu hover:scale-110">
-		  <a rel="noopener noreferrer" href="/Documentation">Documentación</a>
-		</li>
-		<li class="mx-2 md:mx-4 cursor-pointer transition-transform transform-gpu hover:scale-110">
-		  <TermConditions client:load />
-		</li>
-		<li class="mx-2 md:mx-4 transition-transform transform-gpu hover:scale-110">
-		  <SocialMedia />
-		</li>
-	  </ul>
-	</div>
-  </footer>
+  <!-- Sección inferior del footer, posicionada de forma absoluta -->
+  <div class="absolute bottom-0 left-0 w-full h-[6rem]  text-white  bg-[radial-gradient(ellipse_at_center,_#08681b_20%,_#0d0d0d_80%)]  ">
+	
+    <div class="container mx-auto flex flex-col justify-end text-xl">
+      <!-- Enlaces y opciones del footer -->
+      <div class="flex flex-col lg:flex-row justify-center py-3 pt-6 text-sm space-y-4 lg:space-y-0 lg:space-x-6 mt-4 ">
+        <ul class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+          <li class="mx-2 md:mx-4 transition-transform transform-gpu hover:scale-110">
+            <a rel="noopener noreferrer" href="#">IDEA-Agro © {currentYear}</a>
+          </li>
+          <li class="mx-2 md:mx-4 transition-transform transform-gpu hover:scale-110">
+            <a rel="noopener noreferrer" href="/Documentation">Documentación</a>
+          </li>
+          <li class="mx-2 md:mx-4 cursor-pointer transition-transform transform-gpu hover:scale-110">
+            <TermConditions client:load />
+          </li>
+          <li class="mx-2 md:mx-4 transition-transform transform-gpu hover:scale-110">
+            <SocialMedia />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
