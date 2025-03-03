@@ -83,6 +83,25 @@
 						"title": "Comunidades de Pastizales",
 						"description": "Comunidades de pastizales de Uruguay..."
 					}
+				},
+				"Documentation": {
+					"generalDescription": "Descripcion general de la documentación que ofrece nuestra plataforma",
+					"Articles": {
+						"title": "Artículos",
+						"description": "Artículos relacionados con la plataforma"
+					},
+					"SystemUse": {
+						"title": "Uso del sistema",
+						"description": "Uso del sistema"
+					},
+					"API": {
+						"title": "API",
+						"description": "API de la plataforma"
+					},
+					"ResourcesGee": {
+						"title": "Recursos GEE",
+						"description": "Recursos de Google Earth Engine"
+					}
 				}
 			}
 		},
